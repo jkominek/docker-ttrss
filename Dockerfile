@@ -17,7 +17,6 @@ RUN rm /etc/nginx/sites-enabled/default
 WORKDIR /var/www
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl --no-install-recommends && rm -rf /var/lib/apt/lists/* \
     && curl -SL https://tt-rss.org/gitlab/fox/tt-rss/repository/archive.tar.gz?ref=master | tar xzC /var/www --strip-components 1 \
-    && apt-get purge -y --auto-remove curl \
     && chown www-data:www-data -R /var/www
 RUN cp config.php-dist config.php
 
