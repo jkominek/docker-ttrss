@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:17.10
 MAINTAINER Christian Lück <christian@lueck.tv>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
